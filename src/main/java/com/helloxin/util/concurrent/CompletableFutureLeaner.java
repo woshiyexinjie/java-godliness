@@ -22,9 +22,11 @@ public class CompletableFutureLeaner {
                     e.printStackTrace();
                 }
                 //告诉completableFuture任务已经完成
+                System.out.println(Thread.currentThread());
                 completableFuture.complete(121);
             }
         }).start();
+        System.out.println(Thread.currentThread());
         //获取任务结果，如果没有完成会一直阻塞等待
         //如果发生异常 会被限制在执行任务的线程的范围内，最终会杀死该线程，而这会导致等待 get 方法返回结果的线程永久地被阻塞。
         //客户端可以使用重载版本的 get 方法，它使用一个超时参数来避免发生这样的情况
@@ -72,7 +74,7 @@ public class CompletableFutureLeaner {
             }
             return "s1";
         }).exceptionally(e -> {
-            System.out.println(e.getMessage());
+            System.out.println(e.toString());
             return "hello world";
         }).join();
         System.out.println(result);
