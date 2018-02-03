@@ -38,6 +38,11 @@ public class MathLeaner {
 
         System.out.println("Math.negateExact:"+Math.toIntExact(90));
 
+        //看不懂这是什么东西
+        System.out.println("Math.ulp:"+Math.ulp(90));
+
+
+
         System.out.println("StrictMath.tan:"+StrictMath.tan(10));
 
 
