@@ -5,7 +5,7 @@ import java.util.Set;
 import java.util.stream.Stream;
 
 /**
- * Created by nandiexin on 2018/2/3.
+ * Created by nandiexin on 2018/2/3. 这里学习一下 java 9 中对Stream api 的增强
  */
 public class StreamAPIEnhance {
 
