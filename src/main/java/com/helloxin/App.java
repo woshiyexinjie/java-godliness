@@ -8,6 +8,12 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+
+        String param = "18868843789";
+        Integer len = param.length();
+        System.out.println("len:"+len);
+        String test =  param.replaceAll("(?<=[\\d]{3})\\d(?=[\\d]{5})", "*");
+        System.out.println(test);
+        System.out.println(test.length());
     }
 }

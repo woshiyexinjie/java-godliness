@@ -8,6 +8,12 @@ import java.util.Map;
  */
 public class StringLeaner {
 
+
+    public  void sensitiveword(String param){
+        String test =  param.replaceAll("(?<=[\\d]{3})\\d(?=[\\d]{5})", "*");
+        System.out.println(test);
+    }
+
     public static void main(String[] args) {
 
 
