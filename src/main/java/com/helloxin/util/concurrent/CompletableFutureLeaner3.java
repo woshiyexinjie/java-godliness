@@ -13,6 +13,8 @@ public class CompletableFutureLeaner3 {
         CompletableFuture<String> completableFuture = new CompletableFuture<String>();
         completableFuture.complete("hello xin");
         System.out.println(completableFuture.get());
+        System.out.println(completableFuture.get());
+        System.out.println(completableFuture.get());
     }
 
 

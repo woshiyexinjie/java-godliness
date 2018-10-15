@@ -2,7 +2,10 @@ package com.helloxin.util.concurrent;
 
 //import java.util.concurrent.Flow;
 
+import com.sun.tools.javac.Main;
+
 import java.net.InetAddress;
+import java.util.concurrent.Flow;
 
 /**
  * create by nandiexin on 2017/12/27
@@ -10,5 +13,8 @@ import java.net.InetAddress;
 public class FlowLeaner {
 //    Flow
 
-    InetAddress i = null;
+    public static void main(String[] args) {
+
+
+    }
 }

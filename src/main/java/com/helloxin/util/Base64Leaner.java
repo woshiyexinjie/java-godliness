@@ -31,7 +31,8 @@ public class Base64Leaner {
 
     public static void main(String[] args)
     {
-        Base64Leaner base64Leaner = new Base64Leaner();
-        base64Leaner.base64Test();
+//        Base64Leaner base64Leaner = new Base64Leaner();
+//        base64Leaner.base64Test();
+        System.out.println("we".equals(null));
     }
 }
