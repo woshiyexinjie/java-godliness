@@ -28,6 +28,9 @@ public class CharacterLenaer {
 
         char ch= 'A';
         System.out.println(ch > 60);
+        System.out.println(ch);
+        System.out.println(ch+1);
+        System.out.println((char)(ch+1));
 
 
 
