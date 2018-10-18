@@ -1,5 +1,7 @@
 package com.helloxin.base;
 
+import java.util.Date;
+
 /**
  * Created by nandiexin on 2018/10/11.
  */
@@ -26,11 +28,11 @@ public class CharacterLenaer {
 ////         }
 
 
-        char ch= 'A';
-        System.out.println(ch > 60);
-        System.out.println(ch);
-        System.out.println(ch+1);
-        System.out.println((char)(ch+1));
+//        char ch= 'A';
+//        System.out.println(ch > 60);
+//        System.out.println(ch);
+//        System.out.println(ch+1);
+//        System.out.println((char)(ch+1));
 
 
 
