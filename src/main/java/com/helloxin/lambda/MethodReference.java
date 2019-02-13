@@ -15,22 +15,22 @@ public class MethodReference {
     public static void main(String[] args) {
 
         //使用labdas表达式
-//        Stream.of(3,5,3,2,6,5,7,3,22,12).forEach(x->System.out.print(x));
-//
-//        System.out.println("---------------------------------");
-//
-//        //使用方法引用
-//        Stream.of(3,5,3,2,6,5,7,3,22,12)
-//                .forEach(System.out::print);
-//        System.out.println("---------------------------------");
-//
-//        //将方法引用赋值给函数式接口
-//        Consumer<Integer> printer = System.out::print;
-//        Stream.of(3,5,3,2,6,5,7,3,22,12)
-//                .forEach(printer);
-//
-//        System.out.println("---------------------------------");
-//
+        Stream.of(3,5,3,2,6,5,7,3,22,12).forEach(x->System.out.print(x));
+
+        System.out.println("---------------------------------");
+
+        //使用方法引用
+        Stream.of(3,5,3,2,6,5,7,3,22,12)
+                .forEach(System.out::print);
+        System.out.println("---------------------------------");
+
+        //将方法引用赋值给函数式接口
+        Consumer<Integer> printer = System.out::print;
+        Stream.of(3,5,3,2,6,5,7,3,22,12)
+                .forEach(printer);
+
+        System.out.println("---------------------------------");
+
 //
 //        Stream.generate(Math::random)
 //                .limit(10)
@@ -61,6 +61,8 @@ public class MethodReference {
 //        System.out.println("---------------------------------");
 //
 //        System.out.println("a".compareTo("b"));
+
+
 
 
     }
