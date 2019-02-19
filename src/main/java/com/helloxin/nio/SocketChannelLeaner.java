@@ -14,14 +14,13 @@ public class SocketChannelLeaner {
     public static void main(String[] args) throws IOException {
 
         SocketChannel socketChannel = SocketChannel.open();
-        socketChannel.connect(new InetSocketAddress("www.baidu.com", 80));
+        socketChannel.connect(new InetSocketAddress("127.0.0.1", 80));
 
 
         ByteBuffer buf = ByteBuffer.allocate(48);
 
         int bytesRead = socketChannel.read(buf);
-
         System.out.println(bytesRead);
-        socketChannel.close();
+
     }
 }
