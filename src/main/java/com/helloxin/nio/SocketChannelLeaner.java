@@ -22,5 +22,8 @@ public class SocketChannelLeaner {
         int bytesRead = socketChannel.read(buf);
         System.out.println(bytesRead);
 
+        //这里还是要关掉的吧
+        socketChannel.close();
+
     }
 }
