@@ -20,8 +20,7 @@ public class SocketChannelLeaner {
         ByteBuffer buf = ByteBuffer.allocate(48);
 
         int bytesRead = socketChannel.read(buf);
-
         System.out.println(bytesRead);
-        socketChannel.close();
+
     }
 }
