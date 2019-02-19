@@ -25,5 +25,7 @@ public class SocketChannelLeaner {
         //这里还是要关掉的吧
         socketChannel.close();
 
+        //写一行文字
+
     }
 }
