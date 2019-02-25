@@ -13,6 +13,12 @@ public class StringReverseDemo {
 
     public static void main(String[] args) {
 
+
+        String testNull = null;
+        String base = "xin";
+
+        System.out.println(base.equals(testNull));
+
     }
 
 
