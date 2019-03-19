@@ -18,6 +18,7 @@ public class SemaphoreDemo {
             this.age = age;
         }
 
+        @Override
         public void run() {
             try {
                 semaphore.acquire();

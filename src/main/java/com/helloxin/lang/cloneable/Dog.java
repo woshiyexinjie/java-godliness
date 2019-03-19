@@ -54,6 +54,10 @@ public class Dog implements Cloneable {
         System.out.println(dog1); // Dog{id='1', name='Dog1'}
         System.out.println(dog2); // Dog{id='1', name='Dog1 changed'}
 
+
+//        Dog[] aa= new Dog[2] ;
+//        aa[0] = new Dog("2", "Dog1");
+
     }
     //如果一个类里面，又引用其他的类，其他的类又有引用别的类，那么想要深度拷贝必须所有的类及其引用的类都得实现Cloneable接口，
     // 重写clone方法，这样以来非常麻烦，简单的方法是让所有的对象实现序列化接口（Serializable），然后通过序列化反序列化的方法来深度拷贝对象。
