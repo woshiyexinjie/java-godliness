@@ -19,7 +19,7 @@ public class MysqlJDBCLeaner {
         String driver = "com.mysql.jdbc.Driver";
         String url = "jdbc:mysql://localhost:3306/zootopia";
         String user = "root";
-        String password = "XXXXXXXXX";
+        String password = "souche2015";
         //遍历查询结果集
         try {
             //加载驱动程序

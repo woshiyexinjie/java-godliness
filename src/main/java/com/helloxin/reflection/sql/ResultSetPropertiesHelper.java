@@ -30,7 +30,7 @@ public class ResultSetPropertiesHelper {
             Objects.requireNonNull(obj, "obj参数不能为空");
             ArrayList<T> arrayList = new ArrayList<T>();
             ResultSetMetaData metaData = rs.getMetaData();
-            Field[] fields = obj.getFields();
+            Field[] fields = obj.getDeclaredFields();
 
             for (Field field : fields) {
                 System.out.println(field.getName());
@@ -59,7 +59,8 @@ public class ResultSetPropertiesHelper {
 //                    String replace = name.replaceFirst(substring, substring.toUpperCase());
 //                    Method method = obj.getMethod("set" + replace, type);
 
-                    Field field = obj.getField(name);
+                    Field field = obj.getDeclaredField(name);
+                    field.setAccessible(true);
                     if (type.isAssignableFrom(String.class)) {
                         field.set(newInstance, rs.getString(i));
                     } else if (type.isAssignableFrom(int.class) || type.isAssignableFrom(Integer.class)) {
