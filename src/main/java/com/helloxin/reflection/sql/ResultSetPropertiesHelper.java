@@ -1,5 +1,6 @@
 package com.helloxin.reflection.sql;
 
+import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.math.BigDecimal;
@@ -29,6 +30,11 @@ public class ResultSetPropertiesHelper {
             Objects.requireNonNull(obj, "obj参数不能为空");
             ArrayList<T> arrayList = new ArrayList<T>();
             ResultSetMetaData metaData = rs.getMetaData();
+            Field[] fields = obj.getFields();
+
+            for (Field field : fields) {
+                System.out.println(field.getName());
+            }
 
             int count = metaData.getColumnCount();
             while (rs.next()) {
@@ -49,25 +55,42 @@ public class ResultSetPropertiesHelper {
                     }
 
                     //这里主要处理一下 set方法  一般都是 setXxxxx的方式，当然这里没有胡处理那种有的is开头定义的属性,简单实现一下
-                    String substring = name.substring(0, 1);// 首字母大写
-                    String replace = name.replaceFirst(substring, substring.toUpperCase());
-                    Method method = obj.getMethod("set" + replace, type);
+//                    String substring = name.substring(0, 1);// 首字母大写
+//                    String replace = name.replaceFirst(substring, substring.toUpperCase());
+//                    Method method = obj.getMethod("set" + replace, type);
+
+                    Field field = obj.getField(name);
+                    if (type.isAssignableFrom(String.class)) {
+                        field.set(newInstance, rs.getString(i));
+                    } else if (type.isAssignableFrom(int.class) || type.isAssignableFrom(Integer.class)) {
+                        field.set(newInstance, rs.getInt(i));
+                    } else if (type.isAssignableFrom(long.class) || type.isAssignableFrom(Long.class)) {
+                        field.set(newInstance, rs.getLong(i));
+                    } else if (type.isAssignableFrom(BigDecimal.class)) {
+                        field.set(newInstance, rs.getBigDecimal(i));
+                    } else if (type.isAssignableFrom(boolean.class) || type.isAssignableFrom(Boolean.class)) {
+                        field.set(newInstance, rs.getBoolean(i));
+                    } else if (type.isAssignableFrom(Date.class)) {
+                        field.set(newInstance, rs.getDate(i));
+                    }
+
+
                     /**
                      * 判断读取数据的类型
                      */
-                    if (type.isAssignableFrom(String.class)) {
-                        method.invoke(newInstance, rs.getString(i));
-                    } else if (type.isAssignableFrom(int.class) || type.isAssignableFrom(Integer.class)) {
-                        method.invoke(newInstance, rs.getInt(i));
-                    } else if (type.isAssignableFrom(long.class) || type.isAssignableFrom(Long.class)) {
-                        method.invoke(newInstance, rs.getLong(i));
-                    } else if (type.isAssignableFrom(BigDecimal.class)) {
-                        method.invoke(newInstance, rs.getBigDecimal(i));
-                    } else if (type.isAssignableFrom(boolean.class) || type.isAssignableFrom(Boolean.class)) {
-                        method.invoke(newInstance, rs.getBoolean(i));
-                    } else if (type.isAssignableFrom(Date.class)) {
-                        method.invoke(newInstance, rs.getDate(i));
-                    }
+//                    if (type.isAssignableFrom(String.class)) {
+//                        method.invoke(newInstance, rs.getString(i));
+//                    } else if (type.isAssignableFrom(int.class) || type.isAssignableFrom(Integer.class)) {
+//                        method.invoke(newInstance, rs.getInt(i));
+//                    } else if (type.isAssignableFrom(long.class) || type.isAssignableFrom(Long.class)) {
+//                        method.invoke(newInstance, rs.getLong(i));
+//                    } else if (type.isAssignableFrom(BigDecimal.class)) {
+//                        method.invoke(newInstance, rs.getBigDecimal(i));
+//                    } else if (type.isAssignableFrom(boolean.class) || type.isAssignableFrom(Boolean.class)) {
+//                        method.invoke(newInstance, rs.getBoolean(i));
+//                    } else if (type.isAssignableFrom(Date.class)) {
+//                        method.invoke(newInstance, rs.getDate(i));
+//                    }
                 }
                 arrayList.add(newInstance);
             }
@@ -76,6 +99,8 @@ public class ResultSetPropertiesHelper {
         } catch (InstantiationException | IllegalAccessException | SQLException | SecurityException | NoSuchMethodException | IllegalArgumentException
                 | InvocationTargetException e) {
 
+            e.printStackTrace();
+        } catch (NoSuchFieldException e) {
             e.printStackTrace();
         }
 

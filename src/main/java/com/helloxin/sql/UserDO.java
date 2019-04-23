@@ -1,28 +1,31 @@
 package com.helloxin.sql;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.util.Date;
 
 /**
  * Created by nandiexin on 2019/4/22.
  */
-@Data
+@ToString
+@NoArgsConstructor
 public class UserDO {
 
-    private Integer id;
+    public Integer id;
 
-    private String userId;
+    public String userId;
 
-    private String userName;
+    public String userName;
 
-    private String userPhone;
+    public String userPhone;
 
-    private String password;
+    public String password;
 
-    private Date dateCreate;
+    public Date dateCreate;
 
-    private Date dateUpdate;
+    public Date dateUpdate;
 
 
 }
