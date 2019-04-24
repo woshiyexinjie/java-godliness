@@ -69,7 +69,7 @@
 [看看 AbstractSequentialList Java 9](https://my.oschina.net/u/2277632/blog/1842850)  
 [看看 AbstractList 吧 java 9](https://my.oschina.net/u/2277632/blog/1841304)  
 [看看 AbstractCollection 吧](https://my.oschina.net/u/2277632/blog/1839015)    
-[java 10 的局部变量类型推导（Local Variable Type Inference ）](https://my.oschina.net/u/2277632/blog/1831356)
+[java 10 的局部变量类型推导（Local Variable Type Inference ）](https://my.oschina.net/u/2277632/blog/1831356)  
 [Java 9静态工厂方法创建不可变集合](https://my.oschina.net/u/2277632/blog/1619304)  
 [Arrays.asList返回的有限操作的List](https://my.oschina.net/u/2277632/blog/1530305) 
 
@@ -88,18 +88,18 @@
 [@safeVarargs注解](https://my.oschina.net/u/2277632/blog/2967078)
 
 #reactive programing  
-[什么是Reactive Streams in Java 译](https://my.oschina.net/u/2277632/blog/2239976)
-[Flow支持Reactive Streams in Java](https://my.oschina.net/u/2277632/blog/1829705)  
+[什么是Reactive Streams in Java 译](https://my.oschina.net/u/2277632/blog/2239976)  
+[Flow支持Reactive Streams in Java](https://my.oschina.net/u/2277632/blog/1829705)    
 
 #其他  
-[试用阿里开源的Arthas小记](https://my.oschina.net/u/2277632/blog/2218815)
-[20个类型的JAVA程序员该了解和有用的库（译）](https://my.oschina.net/u/2277632/blog/1919257)  
-[java 10 的局部变量类型推导（Local Variable Type Inference ）](https://my.oschina.net/u/2277632/blog/1831356)
-[背压（back-pressure）问题](https://my.oschina.net/u/2277632/blog/1824674)
-[Effective Java 第三版有什么新料 译](https://my.oschina.net/u/2277632/blog/1618901)  
-[看到sequence这个开源中国给排39](https://my.oschina.net/u/2277632/blog/1609361)  
-[java9学习之Jshell入门<一>](https://my.oschina.net/u/2277632/blog/1545686)  
-[jarjar-maven-plugin打包](https://my.oschina.net/u/2277632/blog/1542074)  
-[窥探SnowflakeIdWorker之并发生成唯一ID](https://my.oschina.net/u/2277632/blog/1511458)  
+[试用阿里开源的Arthas小记](https://my.oschina.net/u/2277632/blog/2218815)  
+[20个类型的JAVA程序员该了解和有用的库（译）](https://my.oschina.net/u/2277632/blog/1919257)    
+[java 10 的局部变量类型推导（Local Variable Type Inference ）](https://my.oschina.net/u/2277632/blog/1831356)  
+[背压（back-pressure）问题](https://my.oschina.net/u/2277632/blog/1824674)  
+[Effective Java 第三版有什么新料 译](https://my.oschina.net/u/2277632/blog/1618901)    
+[看到sequence这个开源中国给排39](https://my.oschina.net/u/2277632/blog/1609361)    
+[java9学习之Jshell入门<一>](https://my.oschina.net/u/2277632/blog/1545686)    
+[jarjar-maven-plugin打包](https://my.oschina.net/u/2277632/blog/1542074)    
+[窥探SnowflakeIdWorker之并发生成唯一ID](https://my.oschina.net/u/2277632/blog/1511458)    
 
 
