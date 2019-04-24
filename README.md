@@ -42,14 +42,34 @@
 [学习LinkedBlockingDeque源码](https://my.oschina.net/u/2277632/blog/2986175)    
 [学习ConcurrentLinkedDeque源码](https://my.oschina.net/u/2277632/blog/2980321)  
 [看看DelayQueue源码](https://my.oschina.net/u/2277632/blog/2255846)  
-
+[学习PriorityQueue源码](https://my.oschina.net/u/2277632/blog/2239745)  
+[看看ConcurrentLinkedQueue源码 in Java 9](https://my.oschina.net/u/2277632/blog/2054531)  
+[看看ArrayBlockingQueue源码Java9](https://my.oschina.net/u/2277632/blog/1935465)  
+[看看AbstractQueue源码Java9](https://my.oschina.net/u/2277632/blog/1933766)  
+[看看java.util.Stack源Java 9](https://my.oschina.net/u/2277632/blog/1928580)  
+[看看Vector源码Java 9](https://my.oschina.net/u/2277632/blog/1924386)  
+[看看不常用的RoleList和RoleUnresolvedList源码 Java 9](https://my.oschina.net/u/2277632/blog/1921412)
+[看看不常用的AttributeList源码 Java 9](https://my.oschina.net/u/2277632/blog/1919837)  
+[看看熟悉的ArrayList的源码 Java 9](https://my.oschina.net/u/2277632/blog/1876820)  
+[看看 LinkedList Java 9](https://my.oschina.net/u/2277632/blog/1859673)  
+[看看 AbstractSequentialList Java 9](https://my.oschina.net/u/2277632/blog/1842850)  
+[看看 AbstractList 吧 java 9](https://my.oschina.net/u/2277632/blog/1841304)  
+[看看 AbstractCollection 吧](https://my.oschina.net/u/2277632/blog/1839015)    
+[java 10 的局部变量类型推导（Local Variable Type Inference ）](https://my.oschina.net/u/2277632/blog/1831356)
 
 #线程池 pool  
 [Apache Commons Pool的简单使用](https://my.oschina.net/u/2277632/blog/3038397)
+[fork/join框架Java](https://my.oschina.net/u/2277632/blog/2088040)  
 
 #注解  
 [@safeVarargs注解](https://my.oschina.net/u/2277632/blog/2967078)
 
 #reactive programing  
 [什么是Reactive Streams in Java 译](https://my.oschina.net/u/2277632/blog/2239976)
+[Flow支持Reactive Streams in Java](https://my.oschina.net/u/2277632/blog/1829705)  
+
+#其他
+[试用阿里开源的Arthas小记](https://my.oschina.net/u/2277632/blog/2218815)
+[20个类型的JAVA程序员该了解和有用的库（译）](https://my.oschina.net/u/2277632/blog/1919257)  
+[java 10 的局部变量类型推导（Local Variable Type Inference ）](https://my.oschina.net/u/2277632/blog/1831356)
 
