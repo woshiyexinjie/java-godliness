@@ -19,6 +19,9 @@
 [ThreadLocalRandom的使用](https://my.oschina.net/u/2277632/blog/2999427) 
 [看看HashSet源码](https://my.oschina.net/u/2277632/blog/2998834)  
 [看看抽象类AbstractSet源码](https://my.oschina.net/u/2277632/blog/2994358)  
+[看看ArrayDeque源码](https://my.oschina.net/u/2277632/blog/2907407)  
+[java中的assert关键字](https://my.oschina.net/u/2277632/blog/2879188)  
+[Character的static方法](https://my.oschina.net/u/2277632/blog/2247834)  
 
 
 #java lambdas and stream  
@@ -29,6 +32,8 @@
 [Predicate函数式接口]{https://my.oschina.net/u/2277632/blog/2987654}
 [Supplier函数式接口](https://my.oschina.net/u/2277632/blog/2986467)  
 [Consumer接口](https://my.oschina.net/u/2277632/blog/2985279)  
+[java方法引用(Method References)](https://my.oschina.net/u/2277632/blog/2979236)  
+[Java接口default方法思考钻石问题](https://my.oschina.net/u/2277632/blog/2873862)  
 
 #集合  
 [HashMap 在并发时可能出现的问题](https://my.oschina.net/u/2277632/blog/3029987)  
@@ -36,6 +41,15 @@
 [看看LinkedHashSet源码](https://my.oschina.net/u/2277632/blog/3009438) 
 [学习LinkedBlockingDeque源码](https://my.oschina.net/u/2277632/blog/2986175)    
 [学习ConcurrentLinkedDeque源码](https://my.oschina.net/u/2277632/blog/2980321)  
+[看看DelayQueue源码](https://my.oschina.net/u/2277632/blog/2255846)  
 
-#线程池 pool
+
+#线程池 pool  
 [Apache Commons Pool的简单使用](https://my.oschina.net/u/2277632/blog/3038397)
+
+#注解  
+[@safeVarargs注解](https://my.oschina.net/u/2277632/blog/2967078)
+
+#reactive programing  
+[什么是Reactive Streams in Java 译](https://my.oschina.net/u/2277632/blog/2239976)
+
