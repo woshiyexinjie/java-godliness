@@ -100,6 +100,7 @@
 [看到sequence这个开源中国给排39](https://my.oschina.net/u/2277632/blog/1609361)    
 [java9学习之Jshell入门<一>](https://my.oschina.net/u/2277632/blog/1545686)    
 [jarjar-maven-plugin打包](https://my.oschina.net/u/2277632/blog/1542074)    
-[窥探SnowflakeIdWorker之并发生成唯一ID](https://my.oschina.net/u/2277632/blog/1511458)    
+[窥探SnowflakeIdWorker之并发生成唯一ID](https://my.oschina.net/u/2277632/blog/1511458)  
+[dcm4che3处理dicom文件基本操作](https://my.oschina.net/u/2277632/blog/3095244)   
 
 
