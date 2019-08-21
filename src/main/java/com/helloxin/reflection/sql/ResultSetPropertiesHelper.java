@@ -132,5 +132,7 @@ public class ResultSetPropertiesHelper {
         }
 
         return builder.toString();
+
+
     }
 }
