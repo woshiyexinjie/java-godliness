@@ -1,9 +1,7 @@
 package com.helloxin;
 
 
-import java.net.SocketTimeoutException;
-import java.util.Arrays;
-import java.util.Collections;
+import java.util.Optional;
 
 /**
  * Created by nandiexin on 2018/2/26.
@@ -31,23 +29,30 @@ public class Hello {
 
     public static void main(String[] args) {
 
-        int arr[] = {23,34,32,12,53,89,76,11,8};
-        int i;
-        for (i=0;i<arr.length-1;i++){
-            for(int j=0;j<arr.length-1-i;j++){
-                if(arr[j]<arr[j+1])
-                {
-                    int temp=arr[j];
-                    arr[j]=arr[j+1];
-                    arr[j+1]=temp;
-                }
-            }
-        }
+
+        System.out.println(Optional.ofNullable("123")
+                .map(v -> v + "123")
+                .filter(x -> x.startsWith("321"))
+                .map(t -> t.startsWith("123"))
+                .orElse(false));
+
+//        int arr[] = {23,34,32,12,53,89,76,11,8};
+//        int i;
+//        for (i=0;i<arr.length-1;i++){
+//            for(int j=0;j<arr.length-1-i;j++){
+//                if(arr[j]<arr[j+1])
+//                {
+//                    int temp=arr[j];
+//                    arr[j]=arr[j+1];
+//                    arr[j+1]=temp;
+//                }
+//            }
+//        }
 
 //        Hello h = new Hello();
 //        h.Try(arr);
-        for ( i=0;i<arr.length;i++) {
-            System.out.println(arr[i]);
-        }
+//        for ( i=0;i<arr.length;i++) {
+//            System.out.println(arr[i]);
+//        }
     }
 }

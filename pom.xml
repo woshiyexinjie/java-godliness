@@ -124,7 +124,59 @@
             <artifactId>dcm4che-tool-dcm2jpg</artifactId>
             <version>5.11.0</version>
         </dependency>
-
-
+        <dependency>
+            <groupId>com.googlecode.aviator</groupId>
+            <artifactId>aviator</artifactId>
+            <version>4.2.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>simpleimage</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>javax.media</groupId>-->
+        <!--            <artifactId>jai_core</artifactId>-->
+        <!--            <version>1.1.3</version>-->
+        <!--            <scope>provided</scope>-->
+        <!--        </dependency>-->
+        <dependency>
+            <groupId>org.buildobjects</groupId>
+            <artifactId>jproc</artifactId>
+            <version>2.3.0</version>
+        </dependency>
     </dependencies>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>aliyun</id>
+            <name>aliyunartifactory</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>dcm</id>
+            <name>dcmartifactory</name>
+            <url>ttp://www.dcm4che.org/maven2/</url>
+        </pluginRepository>
+    </pluginRepositories>
+    <repositories>
+        <repository>
+            <id>aliyun</id>
+            <name>aliyunartifactory</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>interval:2</updatePolicy>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>dcm</id>
+            <name>dcmartifactory</name>
+            <url>http://www.dcm4che.org/maven2/</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>interval:2</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
 </project>
