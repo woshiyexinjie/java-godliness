@@ -1,4 +1,4 @@
-package com.helloxin.search;
+package com.helloxin.apache.guava.hash;
 
 
 import com.google.common.hash.BloomFilter;
