@@ -17,7 +17,6 @@ import static org.junit.Assert.*;
  * Created by yebanxian on 2020/8/12.
  */
 public class ComplettableFutureTest {
-
     public static void anyOfExample() {
         StringBuilder result = new StringBuilder();
         List<String> messages = Arrays.asList("a", "b", "c");
@@ -422,6 +421,7 @@ public class ComplettableFutureTest {
                 System.out.println(System.currentTimeMillis() + ":" + s);
             }
         });
+
 
         CompletableFuture<Object> anyOf = CompletableFuture.anyOf(f1, f2);
         System.out.println("到这里了。" + anyOf.get());
