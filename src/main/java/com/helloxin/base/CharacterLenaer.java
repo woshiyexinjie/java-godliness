@@ -1,7 +1,5 @@
 package com.helloxin.base;
 
-import java.util.Date;
-
 /**
  * Created by nandiexin on 2018/10/11.
  */
@@ -34,7 +32,7 @@ public class CharacterLenaer {
 //        System.out.println(ch+1);
 //        System.out.println((char)(ch+1));
 
-
+        System.out.println(Character.digit('A', 16));
 
 
 
