@@ -1,0 +1,30 @@
+1.2.826.0.1.3680043.9.5115.636820765260731958.85010304
+1.2.826.0.1.3680043.9.5115.636820829314464464.20062514
+1.2.826.0.1.3680043.9.5115.636822461451845177.76355196
+
+
+    private String getCancerFeatureString(JSONObject featureMap) {
+        StringBuilder buffer = new StringBuilder();
+        Arrays.asList("is_lobulated", "is_spiculated", "is_vacuole", "is_pleural_indentation", "is_calcification", "is_cavity")
+                .forEach(feature -> buffer.append(featureMap.containsKey(feature) && (boolean) featureMap.get(feature) ? "1" : "0"));
+        return buffer.toString();
+    }
+
+[
+	{
+		"sourceUuid": "da7d7237-b6ca-4153-cc85-6ab4835470d7",
+		"relatedUuid": "aec1d796-45d9-442b-af3a-047aa0f84b9a"
+	}
+
+]
+
+1.2.840.113704.1.111.4668.1575454183.1
+1.2.392.200036.9116.2.6.1.48.1211466023.1594706386.708678
+111019
+59536
+
+
+
+1624,1625,2103,2104,2105,2106,2837,2883
+
+钙化积分，胸腔积液和气胸病灶
