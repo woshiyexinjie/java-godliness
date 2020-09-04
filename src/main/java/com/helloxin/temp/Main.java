@@ -1,39 +1,18 @@
 package com.helloxin.temp;
 
-import java.text.ParseException;
-import java.time.Instant;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Date;
-import java.util.concurrent.TimeUnit;
+import java.io.IOException;
+import java.net.UnknownHostException;
+import java.util.Arrays;
 
 public class Main {
 
-    public static void main(String[] args) throws ParseException {
+    public static void main(String[] args) throws UnknownHostException, IOException {
 
-        long unixTimestamp = 1573768800;
+        String address = ",,,1";
+        System.out.println(Arrays.toString(address.split(",")));
+        System.out.println(Arrays.toString(address.split(",", -1)));
+        System.out.println(Arrays.toString(address.split(",", 0)));
 
-        Date date1 = new Date(unixTimestamp * 1000L);
-        Date date2 = new Date(TimeUnit.MILLISECONDS.convert(unixTimestamp, TimeUnit.SECONDS));
-
-        System.out.println(unixTimestamp + " as date-time in default time zone is " + date1);
-        System.out.println(unixTimestamp + " as date-time in default time zone is " + date2);
-
-        // JDK 8        
-        Instant instant = Instant.ofEpochSecond(unixTimestamp);
-        Date date3 = Date.from(instant);
-        System.out.println("instance:" + instant);
-        System.out.println("instance:" + date3);
-        LocalDateTime date4 = LocalDateTime.ofInstant(instant, ZoneId.of("Australia/Perth"));
-        ZonedDateTime date5 = ZonedDateTime.ofInstant(instant, ZoneId.of("Europe/Bucharest"));
-
-        System.out.println(unixTimestamp + " as date-time in default time zone is " + date3);
-        System.out.println("\n" + unixTimestamp + " as date-time in Australia/Perth time zone is " + date4);
-        System.out.println(unixTimestamp + " as date-time in Europe/Bucharest time zone is "
-                + date5.format(DateTimeFormatter.ofPattern("yyyy-MMM-dd HH:mm:ss Z VV")));
-        System.out.println("\n" + unixTimestamp + " as instant (UTC time) is " + instant);
     }
 
 }
