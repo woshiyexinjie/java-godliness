@@ -15,8 +15,8 @@ import java.util.concurrent.Semaphore;
 /**
  * Created by nandiexin on 2019/5/21.
  */
-public class BuildSomeUsersUtils {
-    final static Integer allnum = 500000000;
+public class BuildUser2 {
+    final static Integer allnum = 2;
     final static Integer threadnum = 50;
 
     public static void main(String[] args) throws InterruptedException, ClassNotFoundException, SQLException {
@@ -33,10 +33,11 @@ public class BuildSomeUsersUtils {
         ExecutorService executor = Executors.newFixedThreadPool(threadnum);
         CountDownLatch count = new CountDownLatch(allnum);
         Semaphore semaphore = new Semaphore(threadnum);
-        String sql = "insert INTO user (user_id,user_name,user_phone,password) VALUES (?,?,?,?)";
-        Connection con = null;
+        String sql = "insert INTO user (user_id,user_name,user_phone,password) VALUES (%s,%s,%s,%s);";
+        String values = ",VALUES (%s,%s,%s,%s)";
         Class.forName(driver);
-        con = DriverManager.getConnection(url, user, password);
+        Connection con = DriverManager.getConnection(url, user, password);
+        con.setAutoCommit(false);
         PreparedStatement pstmt = (PreparedStatement) con.prepareStatement(sql);
         //遍历查询结果集
         try {
@@ -45,11 +46,16 @@ public class BuildSomeUsersUtils {
                 semaphore.acquire();
                 executor.execute(() -> {
                     try {
-                        pstmt.setString(1, RandomUtils.getID32());
-                        pstmt.setString(2, RandomUtils.getName());
-                        pstmt.setString(3, RandomUtils.getTel());
-                        pstmt.setString(4, RandomUtils.convertID(UUID.randomUUID().toString()));
-                        pstmt.executeUpdate();
+                        for (int j = 0; j < 50; j++) {
+//                            pstmt.setString(1, RandomUtils.getID32());
+//                            pstmt.setString(2, RandomUtils.getName());
+//                            pstmt.setString(3, RandomUtils.getTel());
+//                            pstmt.setString(4, RandomUtils.convertID(UUID.randomUUID().toString()));
+                            System.out.println(String.format(sql, RandomUtils.getID32(), RandomUtils.getName(), RandomUtils.getTel(), RandomUtils.convertID(UUID.randomUUID().toString())));
+                            pstmt.addBatch(String.format(sql, RandomUtils.getID32(), RandomUtils.getName(), RandomUtils.getTel(), RandomUtils.convertID(UUID.randomUUID().toString())));
+                        }
+                        pstmt.executeBatch();
+                        con.commit();
                     } catch (SQLException e) {
                         e.printStackTrace();
                     } finally {
